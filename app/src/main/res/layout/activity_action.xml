@@ -20,7 +20,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="250dp"
         android:scaleType="fitXY"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,28 +29,16 @@
         app:layout_constraintTop_toBottomOf="@+id/chronometer"
         app:srcCompat="@drawable/basketballsahasi" />
 
-    <Button
-        android:id="@+id/addActionBtn"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:onClick="addActionBtnOnClick"
-        android:text="Add Action"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ListView
+        android:id="@+id/actionslistview"
         android:layout_width="409dp"
         android:layout_height="191dp"
-        android:layout_marginTop="1dp"
-        android:id="@+id/actionslistview"
+        android:layout_marginTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addActionBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

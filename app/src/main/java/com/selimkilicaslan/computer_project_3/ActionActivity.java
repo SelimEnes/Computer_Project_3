@@ -70,18 +70,13 @@ public class ActionActivity extends AppCompatActivity {
                 ycord=event.getY();
 
                 Log.i("X", String.valueOf(event.getX()));
-                Log.i("X", String.valueOf(event.getY()));
+                Log.i("y", String.valueOf(event.getY()));
 
                 return false;
             }
         });
     }
 
-    public void addActionBtnOnClick(View view) {
-        final Dialog dialog = new Dialog(this);
-        dialog.setContentView(R.layout.popup_layout);
-        dialog.show();
-    }
 
     public void actionPressed(View view) {
         switch (view.getTag().toString()){

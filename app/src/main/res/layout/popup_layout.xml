@@ -200,6 +200,5 @@
             android:onClick="actionPressed"
             android:tag="9"
             android:textSize="40sp" />
-    </GridLayout>
-</LinearLayout>
+    </GridLayout></LinearLayout>
 </ScrollView>
