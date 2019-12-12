@@ -1,11 +1,23 @@
 package com.selimkilicaslan.computer_project_3;
 
+import androidx.annotation.NonNull;
+
 public class Player {
     private int Age;
     private String Name;
     private int Number;
     private String Team;
-    private int TeamID;
+    private String TeamID;
+
+    public String getPlayerID() {
+        return PlayerID;
+    }
+
+    public void setPlayerID(String playerID) {
+        PlayerID = playerID;
+    }
+
+    private String PlayerID;
 
     public int getAge() {
         return Age;
@@ -39,11 +51,26 @@ public class Player {
         Team = team;
     }
 
-    public int getTeamID() {
+    public String getTeamID() {
         return TeamID;
     }
 
-    public void setTeamID(int teamID) {
+    public void setTeamID(String teamID) {
         TeamID = teamID;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        String toReturn = "";
+        toReturn += "{ ";
+        toReturn += "\"age\": " + Age + ", ";
+        toReturn += "\"name\": " + "\"" + Name + "\"" + ", ";
+        toReturn += "\"number\": " + Number + ", ";
+        toReturn += "\"team\": " + "\"" + Team + "\"" + ", ";
+        toReturn += "\"teamID\": " + "\"" + TeamID + "\"" + " ";
+        toReturn += "}";
+
+        return toReturn;
     }
 }

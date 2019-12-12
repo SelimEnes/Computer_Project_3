@@ -1,19 +1,21 @@
 package com.selimkilicaslan.computer_project_3;
 
+import androidx.annotation.NonNull;
+
 public class MatchAction {
     private float LocationX;
     private float LocationY;
-    private String Person1;
-    private String Person2;
+    private Player Person1;
+    private Player Person2;
     private String Type;
     private String actionTeamName;
     private long Time;
 
-    public String getPerson2() {
+    public Player getPerson2() {
         return Person2;
     }
 
-    public void setPerson2(String person2) {
+    public void setPerson2(Player person2) {
         Person2 = person2;
     }
 
@@ -49,11 +51,11 @@ public class MatchAction {
         this.LocationY = locationY;
     }
 
-    public String getPerson1() {
+    public Player getPerson1() {
         return Person1;
     }
 
-    public void setPerson1(String person1) {
+    public void setPerson1(Player person1) {
         this.Person1 = person1;
     }
 
@@ -63,5 +65,24 @@ public class MatchAction {
 
     public void setType(String type) {
         this.Type = type;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        String toReturn = "";
+        toReturn += "{ ";
+        toReturn += "\"locationX\": " + LocationX + ", ";
+        toReturn += "\"locationY\": " + LocationY + ", ";
+        toReturn += "\"player1\": " + Person1.toString() + ", ";
+        if(Person2 != null) {
+            toReturn += "\"player2\": " + Person2.toString() + ", ";
+        }
+        toReturn += "\"type\": " + "\"" + Type + "\"" + ", ";
+        toReturn += "\"actionTeamName\": " + "\"" + actionTeamName + "\"" + ", ";
+        toReturn += "\"time\": " + Time + " ";
+        toReturn += "}";
+
+        return toReturn;
     }
 }
